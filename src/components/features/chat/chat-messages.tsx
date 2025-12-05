@@ -53,6 +53,8 @@ const ChatMessages = () => {
     };
   }, [currentRoom?.id]);
 
+  if (!currentRoom?.id) return null;
+
   if (isLoading) return <p className="loader-text">Loading messages...</p>;
 
   if (error)
